@@ -1,0 +1,104 @@
+#!/usr/bin/perl 
+# 
+# simpel wrapper for the picard jars
+# 
+# 
+# Kim Brugger (16 Apr 2010), contact: kim.brugger@easih.ac.uk
+
+use strict;
+use warnings;
+use Data::Dumper;
+use Getopt::Std;
+
+
+my @java_paths = ("/software/packages/java/",
+		  "/usr/bin/");
+
+
+my @picard_paths = ( "/software/packages/",
+                     "/usr/");
+
+
+my ( $java, $picard_dir);
+
+set_paths();
+
+$java = "/usr/bin/java";
+
+my @picard_jars = glob("$picard_dir/*jar");
+map{ $_ =~ s/.*\/// } @picard_jars;
+
+my %opts;
+getopts('hJ:T:v', \%opts);
+
+if ( $opts{'v'} ) {
+  my $picard = (grep (/picard-\d\.\d+.jar/, @picard_jars))[0];
+  $picard =~ s/.jar//;
+  print "$picard\n";
+  exit;
+}
+elsif ( $opts{ h } || (! $opts{J} && ! $opts{T})) {
+
+  $0 =~ /.*\//;
+  print STDERR "USAGE $0 -h[elp] -J[ar file] <jar opts> -v<ersion>\n";
+  print STDERR "Jars: " . join("\n      ", @picard_jars) . "\n";
+  exit 1;
+}
+
+my $module = $opts{J} || $opts{T};
+
+$module .= ".jar" if ( $module !~ /.jar/);
+
+
+system  "$java -Xmx2000m -jar $picard_dir/$module @ARGV\n";
+my $exit_value = $?>>8;
+exit $exit_value;
+
+
+
+
+# 
+# 
+# 
+# Kim Brugger (06 Oct 2010)
+sub set_paths {
+  
+  my ($java_date, $picard_date) = (0, 0);
+  
+  foreach my $java_path ( @java_paths ) {
+    
+    if (-e $java_path ) {
+      foreach my $installation ( glob("$java_path/*")) {
+	if ( -e "$installation/bin/java" && -x "$installation/bin/java"  ) {
+	  
+	  my ($dev, $ino, $mode, $nlink, $uid, $gid, $rdev, $size, $atime, $mtime, $ctime, $blksize, $blocks) = stat("$installation/bin/java");
+	  if ( $java_date < $mtime ) {
+	    $java = "$installation/bin/java";
+	    $java_date = $mtime;
+	  }
+	}
+      }
+    }
+  }
+  
+
+
+  foreach my $picard_path ( @picard_paths ) {
+    
+    if (-e $picard_path ) {
+      foreach my $installation ( glob("$picard_path/picard*")) {
+	foreach my $pfile ( glob("$installation/picard*.jar")) {
+	  if ( -e $pfile && $pfile =~ /picard-\d.\d+.jar/) {
+	    my ($dev, $ino, $mode, $nlink, $uid, $gid, $rdev, $size, $atime, $mtime, $ctime, $blksize, $blocks) = stat("$pfile");
+	    if ( $picard_date < $mtime ) {
+	      $picard_dir = $installation;
+	      $picard_date = $mtime;
+	      last;
+	    }
+	  }
+	}
+      }
+    }
+  }
+
+}
