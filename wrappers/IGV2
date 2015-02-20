@@ -1,0 +1,2 @@
+cd /software/packages/IGV_2.3.32
+sh igv.sh
