@@ -25,7 +25,7 @@ use Data::Dumper;
 use Getopt::Std;
 
 use lib '/software/packages/ctru-pipeline/modules';
-use lib '/software/packages/ctru-clinical/modules';
+use lib '/software/packages/HIV-pipeline/modules';
 
 use CTRU::Git;
 use CTRU::Pipeline;
@@ -42,7 +42,7 @@ my $username = scalar getpwuid $<;
 
 my $samtools        = '/software/bin/samtools';#EASIH::Pipeline::Misc::find_program('samtools');
 my $picard          = '/software/bin/picard';
-my $smalt           = '/software/bin/smalt-0.7.6';
+my $smalt           = '/software/bin/smalt_0.7.6';
 my $cutadapt      = '/software/packages/cutadapt-1.1/bin/cutadapt';
 
 use File::Basename;
@@ -100,7 +100,6 @@ if ( $opts{Q} ) {
   $opts{'l'} = 1;
   $opts{'m'} = 1;
 
-  CTRU::Pipeline::set_project_name("P".$opts{'Q'});
 
   my $path = `pwd`;
   if ( $path =~ /(CP\d+.*)\// ) {
@@ -134,10 +133,6 @@ my $bam_file = "$out.bam";
 
 my $host_cpus      = nr_of_cpus();
 
-use CTRU::ComplexLog;
-CTRU::Pipeline::logger('CTRU::ComplexLog');
-$CTRU::Pipeline::logger->level('fatal');
-$CTRU::Pipeline::logger->level('debug');
 
 
 my $run_id = "---";
@@ -148,11 +143,8 @@ open (*STDOUT, ">> $log") || die "Could not open '$log': $!\n" if ( $log );
 
 #validate_input();
 
-#CTRU::Pipeline::backend('Local');
-#CTRU::Pipeline::max_jobs( $host_cpus );
-#CTRU::Pipeline::max_retry(0);
-
-CTRU::Pipeline::backend('SGE');
+CTRU::Pipeline::backend('Local');
+CTRU::Pipeline::max_jobs( $host_cpus );
 
 CTRU::Pipeline::add_start_step('trim_reads');
 CTRU::Pipeline::add_merge_step('trim_reads','smalt');
@@ -181,13 +173,6 @@ CTRU::Pipeline::add_merge_step('bam_codons', 'finish');
 #CTRU::Pipeline::print_flow();
 #exit;
 
-
-CTRU::ComplexLog->info( {'ctru-pipeline' => CTRU::Pipeline::version(), 
-			 'ctru-clinical' => "$VERSION-".CTRU::Git::version(), 
-			 "smalt"         => CTRU::Versions::smalt( $smalt ),
-			 'samtools'      => CTRU::Versions::samtools( $samtools ),
-			 'picard'        => CTRU::Versions::picard( $picard ),
-			 'type'          => 'versions'});
 
 
 &CTRU::Pipeline::run();
@@ -228,6 +213,7 @@ sub smalt {
 
   my $tmp_bam  = CTRU::Pipeline::tmp_file(".bam");
   my $cmd = "$smalt map -n 14 -f sam $smalt_reference $trimmed_first $trimmed_second | egrep -v \\\# | $samtools view -t $reference.fai -Sb - > $tmp_bam";
+  $cmd = "$smalt map -f sam $smalt_reference $trimmed_first $trimmed_second | egrep -v \\\# | $samtools view -t $reference.fai -Sb - > $tmp_bam";
 
 #  print STDERR "$cmd\n";
 
@@ -297,7 +283,7 @@ sub bam_sort {
   $sample =~ s/_\d*//;
 
   my $tmp_bam  = CTRU::Pipeline::tmp_file(".bam");
-  my $cmd = "$picard -T AddOrReplaceReadGroups.jar I=$input O=$tmp_bam SORT_ORDER=coordinate CN=CTRU PL=$platform LB=$readgroup PU=$run_id  SM=$out VALIDATION_STRINGENCY=SILENT CREATE_INDEX=false";  
+  my $cmd = "$picard -T AddOrReplaceReadGroups.jar I=$input O=$tmp_bam SORT_ORDER=coordinate CN=CTRU PL=$platform LB=$readgroup PU=$run_id  SM=$out VALIDATION_STRINGENCY=SILENT CREATE_INDEX=false ";  
 
   print "$cmd\n";
 
@@ -387,7 +373,7 @@ sub mark_dups {
 
   my $username = scalar getpwuid $<;
   my $metrix_file = CTRU::Pipeline::tmp_file(".mtx");
-  my $cmd = "$picard -T MarkDuplicates  I=$input O=$bam_file  M= $metrix_file VALIDATION_STRINGENCY=SILENT TMP_DIR=/tmp/ MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=true ASSUME_SORTED=Boolean ";
+  my $cmd = "$picard -T MarkDuplicates  I=$input O=$bam_file  M= $metrix_file VALIDATION_STRINGENCY=SILENT TMP_DIR=/tmp/ MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=true ASSUME_SORTED=true ";
   print STDERR "$cmd\n";
   CTRU::Pipeline::submit_job($cmd, $bam_file);
 }

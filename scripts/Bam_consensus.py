@@ -4,7 +4,7 @@ import getopt
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
-sys.path.append("/software/lib/python2.7/site-packages/pysam-0.7.5-py2.7-linux-x86_64.egg")
+sys.path.append("/software/lib/python2.7/site-packages/pysam-0.7.1-py2.7-linux-x86_64.egg/")
 
 import re
 
