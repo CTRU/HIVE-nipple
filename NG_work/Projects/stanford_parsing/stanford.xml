@@ -1,0 +1,567 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="http://hivdb.stanford.edu/sierra/xsl/hivTransform.xsl"?>
+<Stanford_Algorithm_Interpretation>
+    <algorithmVersion>7.0.1</algorithmVersion>
+    <webServiceVersion>beta-1.0.1</webServiceVersion>
+
+    <success>
+        <sequence md5sum="dfa466f3b9faddd50457b2168f063517">CCTCAAATCACTCTTTGGCAACGACCCATCGTCACAATAAAGATAGGGGGGCAGCTAARGGAAGCTCTATTAGATACAGGAGCAGATGATACAGTATTAGAAGATATAAATTTGCCAGGAAGATGGACACCAAAAATKATAGTGGGAATTGGAGGTTTTACCAAAGTAAGACAGTATGATCAGATACCTGTAGAAATTTGTGGACATAAAGCTATAGGTACAGTRTTAGTAGGACCTACACCTGCCAACATAATTGGAAGAAATCTGTTGACYCAGATTGGTTGCACTTTAAATTTTCCCATTAGTCCTATTGACACTGTACCAGTAAAATTAAAGCCAGGAATGGATGGCCCAAAAGTTAAACAATGGCCATTGACAGAAGAAAAAATAAAAGCATTAGTAGAAATTTGTGCAGAATTGGAASAGGACGGGAAAATTTCAAAAATTGGGCCTGAAAATCCATACAATACTCCAGTATTTGCCATAAAGAAAAAGAACAGYGATAAATGGAGAAAATTAGTAGATTTCAGAGAACTTAATAAGAGAACTCAAGACTTCTGGGAAGTTCAATTAGGAATACCACATCCCGGAGGGTTAAAAAAGAACAAATCAGTAACAGTACTGGATGTGGGTGATGCATATTTTTCARTTCCCTTAGATGAAGACTTCAGGAAGTATACTGCATTTACCATACCTAGTATAAACAATGAGACACCAGGGACTAGATATCAGTACAATGTGCTTCCACAGGGATGGAAAGGATCACCAGCAATATTCCAAAGTAGCATGACAAGAATCTTAGAACCTTTTAGAAAACAGAATCCAGACATAGTTATCTGTCAATAYGTGGATGATTTGTATGTAGGATCTGACTTAGAAATAGAGMAGCATAGAACAAAAGTAGAGGAACTGAGACAACATTTGTGGAAGTGGGGNTTTTACACACCAGACAAMAAACATCAGAAAGAACCTCCATTCCTTTGGATGGGTTATGAACTCCATCCTGATAAATGGACA</sequence>
+
+        <summary>
+            <PR>
+                <present>true</present>
+                <consensus>PQITLWQRPLVTIKIGGQLKEALLDTGADDTVLEEMNLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF</consensus>
+                <alignedNASequence>CCTCAAATCACTCTTTGGCAACGACCCATCGTCACAATAAAGATAGGGGGGCAGCTAARGGAAGCTCTATTAGATACAGGAGCAGATGATACAGTATTAGAAGATATAAATTTGCCAGGAAGATGGACACCAAAAATKATAGTGGGAATTGGAGGTTTTACCAAAGTAAGACAGTATGATCAGATACCTGTAGAAATTTGTGGACATAAAGCTATAGGTACAGTRTTAGTAGGACCTACACCTGCCAACATAATTGGAAGAAATCTGTTGACYCAGATTGGTTGCACTTTAAATTTT</alignedNASequence>
+                <alignedAASequence>PQITLWQRPIVTIKIGGQLREALLDTGADDTVLEDINLPGRWTPKIIVGIGGFTKVRQYDQIPVEICGHKAIGTVLVGPTPANIIGRNLLTQIGCTLNF</alignedAASequence>
+                <firstAA>1</firstAA>
+                <lastAA>99</lastAA>
+                <subtype type="B" percentSimilarity="93.6"/>
+            </PR>
+            <RT>
+                <present>true</present>
+                <consensus>PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKIGPENPYNTPVFAIKKKDSTKWRKLVDFRELNKRTQDFWEVQLGIPHPAGLKKKKSVTVLDVGDAYFSVPLDKDFRKYTAFTIPSINNETPGIRYQYNVLPQGWKGSPAIFQSSMTKILEPFRKQNPDIVIYQYMDDLYVGSDLEIGQHRTKIEELRQHLLRWGFTTPDKKHQKEPPFLWMGYELHPDKWTVQPIVLPEKDSWTVNDIQKLVGKLNWASQIYAGIKVKQLCKLLRGTKALTEVIPLTEEAELELAENREILKEPVHGVYYDPSKDLIAEIQKQGQGQWTYQIYQEPFKNLKTGKYARMRGAHTNDVKQLTEAVQKIATESIVIWGKTPKFKLPIQKETWEAWWTEYWQATWIPEWEFVNTPPLVKLWYQLEKEPIVGAETFYVDGAANRETKLGKAGYVTDRGRQKVVSLTDTTNQKTELQAIHLALQDSGLEVNIVTDSQYALGIIQAQPDKSESELVSQIIEQLIKKEKVYLAWVPAHKGIGGNEQVDKLVSAGIRKVL</consensus>
+                <alignedNASequence>CCCATTAGTCCTATTGACACTGTACCAGTAAAATTAAAGCCAGGAATGGATGGCCCAAAAGTTAAACAATGGCCATTGACAGAAGAAAAAATAAAAGCATTAGTAGAAATTTGTGCAGAATTGGAASAGGACGGGAAAATTTCAAAAATTGGGCCTGAAAATCCATACAATACTCCAGTATTTGCCATAAAGAAAAAGAACAGYGATAAATGGAGAAAATTAGTAGATTTCAGAGAACTTAATAAGAGAACTCAAGACTTCTGGGAAGTTCAATTAGGAATACCACATCCCGGAGGGTTAAAAAAGAACAAATCAGTAACAGTACTGGATGTGGGTGATGCATATTTTTCARTTCCCTTAGATGAAGACTTCAGGAAGTATACTGCATTTACCATACCTAGTATAAACAATGAGACACCAGGGACTAGATATCAGTACAATGTGCTTCCACAGGGATGGAAAGGATCACCAGCAATATTCCAAAGTAGCATGACAAGAATCTTAGAACCTTTTAGAAAACAGAATCCAGACATAGTTATCTGTCAATAYGTGGATGATTTGTATGTAGGATCTGACTTAGAAATAGAGMAGCATAGAACAAAAGTAGAGGAACTGAGACAACATTTGTGGAAGTGGGGNTTTTACACACCAGACAAMAAACATCAGAAAGAACCTCCATTCCTTTGGATGGGTTATGAACTCCATCCTGATAAATGGACA</alignedNASequence>
+                <alignedAASequence>PISPIDTVPVKLKPGMDGPKVKQWPLTEEKIKALVEICAELEQDGKISKIGPENPYNTPVFAIKKKNSDKWRKLVDFRELNKRTQDFWEVQLGIPHPGGLKKNKSVTVLDVGDAYFSIPLDEDFRKYTAFTIPSINNETPGTRYQYNVLPQGWKGSPAIFQSSMTRILEPFRKQNPDIVICQYVDDLYVGSDLEIEKHRTKVEELRQHLWKWGFYTPDNKHQKEPPFLWMGYELHPDKWT</alignedAASequence>
+                <firstAA>1</firstAA>
+                <lastAA>240</lastAA>
+                <subtype type="B" percentSimilarity="95.3"/>
+            </RT>
+            <IN>
+                <present>false</present>
+            </IN>
+        </summary>
+
+        <PR_mutations>
+            <mutation classification="PI_MINOR">L10I</mutation>
+            <mutation classification="OTHER">K20KR</mutation>
+            <mutation classification="OTHER">E35D</mutation>
+            <mutation classification="OTHER">M36I</mutation>
+            <mutation classification="PI_MINOR">K43T</mutation>
+            <mutation classification="PI_MAJOR">M46IM</mutation>
+            <mutation classification="PI_MAJOR">G48V</mutation>
+            <mutation classification="PI_MAJOR">I54T</mutation>
+            <mutation classification="OTHER">L63P</mutation>
+            <mutation classification="OTHER">I64V</mutation>
+            <mutation classification="PI_MAJOR">V82A</mutation>
+        </PR_mutations>
+
+        <RT_mutations>
+            <mutation classification="OTHER">E6D</mutation>
+            <mutation classification="OTHER">T39A</mutation>
+            <mutation classification="NRTI">M41L</mutation>
+            <mutation classification="OTHER">K43EQ</mutation>
+            <mutation classification="OTHER">E44D</mutation>
+            <mutation classification="NRTI">D67N</mutation>
+            <mutation classification="NRTI">T69D</mutation>
+            <mutation classification="NNRTI">A98G</mutation>
+            <mutation classification="NNRTI">K103N</mutation>
+            <mutation classification="OTHER">V118IV</mutation>
+            <mutation classification="OTHER">K122E</mutation>
+            <mutation classification="OTHER">I142T</mutation>
+            <mutation classification="OTHER">K166R</mutation>
+            <mutation classification="NNRTI">Y181C</mutation>
+            <mutation classification="NRTI">M184V</mutation>
+            <mutation classification="OTHER">G196E</mutation>
+            <mutation classification="OTHER">Q197KQ</mutation>
+            <mutation classification="OTHER">I202V</mutation>
+            <mutation classification="NRTI">L210W</mutation>
+            <mutation classification="OTHER">R211K</mutation>
+            <mutation classification="NRTI">T215Y</mutation>
+            <mutation classification="NRTI">K219KN</mutation>
+        </RT_mutations>
+
+        <SequenceQA>
+            <PR>
+                <image href="http://sierra.hivdb.org/sierra/servlet/ChartMaker?ed=PR.Dakbrbubwccde.Maubjbkclcm"/>
+            </PR>
+            <RT>
+                <image href="http://sierra.hivdb.org/sierra/servlet/ChartMaker?ed=RT.Qif.Dbpcpcrdudzgzhcicihil.Magbnbrbseoesfmgkhohphuid"/>
+                <ambiguous>213</ambiguous>
+            </RT>
+        </SequenceQA>
+
+        <drugScores>
+            <drug code="3TC" genericName="lamivudine" type="NRTI" score="95" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="5.0"/>
+                <partialScore mutation="M184V" score="60.0"/>
+                <partialScore mutation="L210W" score="5.0"/>
+                <partialScore mutation="T215Y" score="5.0"/>
+                <partialScore mutation="V118IV,T215Y,M41L" score="5.0"/>
+                <partialScore mutation="E44D,V118IV" score="10.0"/>
+                <partialScore mutation="E44D,T215Y,M41L" score="5.0"/>
+            </drug>
+            <drug code="ABC" genericName="abacavir" type="NRTI" score="110" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="10.0"/>
+                <partialScore mutation="D67N" score="5.0"/>
+                <partialScore mutation="M184V" score="15.0"/>
+                <partialScore mutation="L210W" score="10.0"/>
+                <partialScore mutation="T215Y" score="15.0"/>
+                <partialScore mutation="K219KN" score="5.0"/>
+                <partialScore mutation="V118IV,T215Y,M41L" score="5.0"/>
+                <partialScore mutation="L210W,T215Y" score="10.0"/>
+                <partialScore mutation="L210W,M41L" score="10.0"/>
+                <partialScore mutation="T215Y,M41L" score="10.0"/>
+                <partialScore mutation="E44D,V118IV" score="10.0"/>
+                <partialScore mutation="E44D,T215Y,M41L" score="5.0"/>
+            </drug>
+            <drug code="ATV/r" genericName="atazanavir/r" type="PI" score="90" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M46IM" score="10.0"/>
+                <partialScore mutation="G48V" score="30.0"/>
+                <partialScore mutation="I54T" score="15.0"/>
+                <partialScore mutation="V82A" score="15.0"/>
+                <partialScore mutation="V82A,M46IM" score="10.0"/>
+                <partialScore mutation="I54T,V82A" score="10.0"/>
+            </drug>
+            <drug code="AZT" genericName="zidovudine" type="NRTI" score="140" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="15.0"/>
+                <partialScore mutation="D67N" score="15.0"/>
+                <partialScore mutation="M184V" score="-10.0"/>
+                <partialScore mutation="L210W" score="15.0"/>
+                <partialScore mutation="T215Y" score="45.0"/>
+                <partialScore mutation="K219KN" score="10.0"/>
+                <partialScore mutation="V118IV,T215Y,M41L" score="5.0"/>
+                <partialScore mutation="L210W,T215Y" score="10.0"/>
+                <partialScore mutation="L210W,M41L" score="10.0"/>
+                <partialScore mutation="T215Y,M41L" score="10.0"/>
+                <partialScore mutation="E44D,V118IV" score="10.0"/>
+                <partialScore mutation="E44D,T215Y,M41L" score="5.0"/>
+            </drug>
+            <drug code="D4T" genericName="stavudine" type="NRTI" score="150" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="15.0"/>
+                <partialScore mutation="D67N" score="15.0"/>
+                <partialScore mutation="T69D" score="10.0"/>
+                <partialScore mutation="M184V" score="-10.0"/>
+                <partialScore mutation="L210W" score="15.0"/>
+                <partialScore mutation="T215Y" score="45.0"/>
+                <partialScore mutation="K219KN" score="10.0"/>
+                <partialScore mutation="V118IV,T215Y,M41L" score="5.0"/>
+                <partialScore mutation="L210W,T215Y" score="10.0"/>
+                <partialScore mutation="L210W,M41L" score="10.0"/>
+                <partialScore mutation="T215Y,M41L" score="10.0"/>
+                <partialScore mutation="E44D,V118IV" score="10.0"/>
+                <partialScore mutation="E44D,T215Y,M41L" score="5.0"/>
+            </drug>
+            <drug code="DDI" genericName="didanosine" type="NRTI" score="135" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="10.0"/>
+                <partialScore mutation="D67N" score="5.0"/>
+                <partialScore mutation="T69D" score="30.0"/>
+                <partialScore mutation="M184V" score="10.0"/>
+                <partialScore mutation="L210W" score="10.0"/>
+                <partialScore mutation="T215Y" score="15.0"/>
+                <partialScore mutation="K219KN" score="5.0"/>
+                <partialScore mutation="V118IV,T215Y,M41L" score="5.0"/>
+                <partialScore mutation="L210W,T215Y" score="10.0"/>
+                <partialScore mutation="L210W,M41L" score="10.0"/>
+                <partialScore mutation="T215Y,M41L" score="10.0"/>
+                <partialScore mutation="E44D,V118IV" score="10.0"/>
+                <partialScore mutation="E44D,T215Y,M41L" score="5.0"/>
+            </drug>
+            <drug code="DRV/r" genericName="darunavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="EFV" genericName="efavirenz" type="NNRTI" score="100" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="A98G" score="10.0"/>
+                <partialScore mutation="K103N" score="60.0"/>
+                <partialScore mutation="Y181C" score="30.0"/>
+            </drug>
+            <drug code="ETR" genericName="etravirine" type="NNRTI" score="40" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="A98G" score="10.0"/>
+                <partialScore mutation="Y181C" score="30.0"/>
+            </drug>
+            <drug code="FPV/r" genericName="fosamprenavir/r" type="PI" score="55" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="M46IM" score="10.0"/>
+                <partialScore mutation="I54T" score="10.0"/>
+                <partialScore mutation="V82A" score="15.0"/>
+                <partialScore mutation="V82A,M46IM" score="10.0"/>
+                <partialScore mutation="I54T,V82A" score="10.0"/>
+            </drug>
+            <drug code="FTC" genericName="emtricitabine" type="NRTI" score="95" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="5.0"/>
+                <partialScore mutation="M184V" score="60.0"/>
+                <partialScore mutation="L210W" score="5.0"/>
+                <partialScore mutation="T215Y" score="5.0"/>
+                <partialScore mutation="V118IV,T215Y,M41L" score="5.0"/>
+                <partialScore mutation="E44D,V118IV" score="10.0"/>
+                <partialScore mutation="E44D,T215Y,M41L" score="5.0"/>
+            </drug>
+            <drug code="IDV/r" genericName="indinavir/r" type="PI" score="85" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M46IM" score="10.0"/>
+                <partialScore mutation="G48V" score="10.0"/>
+                <partialScore mutation="I54T" score="15.0"/>
+                <partialScore mutation="V82A" score="30.0"/>
+                <partialScore mutation="V82A,M46IM" score="10.0"/>
+                <partialScore mutation="I54T,V82A" score="10.0"/>
+            </drug>
+            <drug code="LPV/r" genericName="lopinavir/r" type="PI" score="75" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M46IM" score="10.0"/>
+                <partialScore mutation="G48V" score="10.0"/>
+                <partialScore mutation="I54T" score="10.0"/>
+                <partialScore mutation="V82A" score="30.0"/>
+                <partialScore mutation="V82A,M46IM" score="5.0"/>
+                <partialScore mutation="I54T,V82A" score="10.0"/>
+            </drug>
+            <drug code="NFV" genericName="nelfinavir" type="PI" score="120" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M46IM" score="20.0"/>
+                <partialScore mutation="G48V" score="30.0"/>
+                <partialScore mutation="I54T" score="20.0"/>
+                <partialScore mutation="V82A" score="30.0"/>
+                <partialScore mutation="V82A,M46IM" score="10.0"/>
+                <partialScore mutation="I54T,V82A" score="10.0"/>
+            </drug>
+            <drug code="NVP" genericName="nevirapine" type="NNRTI" score="150" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="A98G" score="30.0"/>
+                <partialScore mutation="K103N" score="60.0"/>
+                <partialScore mutation="Y181C" score="60.0"/>
+            </drug>
+            <drug code="RPV" genericName="rilpivirine" type="NNRTI" score="45" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="A98G" score="15.0"/>
+                <partialScore mutation="Y181C" score="30.0"/>
+            </drug>
+            <drug code="SQV/r" genericName="saquinavir/r" type="PI" score="105" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M46IM" score="5.0"/>
+                <partialScore mutation="G48V" score="60.0"/>
+                <partialScore mutation="I54T" score="15.0"/>
+                <partialScore mutation="V82A" score="15.0"/>
+                <partialScore mutation="I54T,V82A" score="10.0"/>
+            </drug>
+            <drug code="TDF" genericName="tenofovir" type="NRTI" score="85" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="10.0"/>
+                <partialScore mutation="D67N" score="5.0"/>
+                <partialScore mutation="M184V" score="-10.0"/>
+                <partialScore mutation="L210W" score="10.0"/>
+                <partialScore mutation="T215Y" score="15.0"/>
+                <partialScore mutation="K219KN" score="5.0"/>
+                <partialScore mutation="V118IV,T215Y,M41L" score="5.0"/>
+                <partialScore mutation="L210W,T215Y" score="10.0"/>
+                <partialScore mutation="L210W,M41L" score="10.0"/>
+                <partialScore mutation="T215Y,M41L" score="10.0"/>
+                <partialScore mutation="E44D,V118IV" score="10.0"/>
+                <partialScore mutation="E44D,T215Y,M41L" score="5.0"/>
+            </drug>
+            <drug code="TPV/r" genericName="tipranavir/r" type="PI" score="35" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="K43T" score="10.0"/>
+                <partialScore mutation="M46IM" score="5.0"/>
+                <partialScore mutation="I54T" score="20.0"/>
+            </drug>
+        </drugScores>
+
+        <comments>
+            <comment id="RT_POS210W_NRTI">L210W usually occurs in combination with M41L and T215Y. The combination of M41, L210W and T215Y causes high-level resistance to AZT and d4T and intermediate to high-level resistance to ddI, ABC and TDF.</comment>
+            <comment id="RT_POS44AD_Other">E44A/D are minimally polymorphic accessory NRTI-resistance mutations that usually occur with multiple TAMs.</comment>
+            <comment id="RT_POS215Y_NRTI">T215Y is a TAM which causes intermediate/high-level resistance to AZT and d4T and low-level resistance to ABC, ddI, and TDF.</comment>
+            <comment id="RT_POS41L_NRTI">M41L is a TAM that usually occurs with T215Y. Together, M41L and T215Y confer high-level resistance to AZT and d4T and intermediate-level resistance to ddI, ABC and TDF. However, viruses with M41L + T215Y + M184V will exhibit intermediate-level resistance to AZT and d4T and low-level resistance to TDF.</comment>
+            <comment id="RT_POS184VI_NRTI">M184V/I cause high-level resistance to 3TC and FTC and low-level resistance to ddI and ABC. However, M184V/I are not contraindications to continued treatment with 3TC or FTC because they increase susceptibility to AZT, TDF and d4T and are associated with clinically significant reductions in HIV-1 replication. In combination with K101E or E138K, M184I synergistically reduces RPV susceptibility.</comment>
+            <comment id="RT_POS103N_NNRTI">K103N is a nonpolymorphic mutation that causes high-level resistance to NVP (~50-fold reduced susceptibility) and EFV (~20-fold reduced susceptibility).</comment>
+            <comment id="RT_POS181C_NNRTI">Y181C is a nonpolymorphic mutation selected in patients receiving NVP, ETR and RPV. It reduces susceptibility to NVP, ETR, RPV, and EFV by >50-fold, 5-fold, 3-fold, and 2-fold, respectively. Although Y181C itself reduces EFV susceptibility by only 2-fold, it is associated with a reduced response to an EFV-containing regimen because viruses with this mutation often harbor additional minority variant NNRTI-resistance mutations. Y181C has a weight of 2.5 in the Tibotec ETR GSS.</comment>
+            <comment id="RT_POS98G_NNRTI">A98G is a nonpolymorphic accessory mutation that reduces NVP susceptibility by ~5-fold and EFV susceptibility by about 3-fold. It has a weight of 1.0 in the Tibotec ETR genotypic susceptibility score.</comment>
+            <comment id="RT_POS69D_NRTI">T69D is a nonpolymorphic mutation that reduces susceptibility to ddI and possibly d4T.</comment>
+            <comment id="RT_POS67N_NRTI">D67N is a nonpolymorphic TAM associated with low-level resistance to AZT and d4T. When present with other TAMs, it reduces susceptibility to ABC, TDF and ddI.</comment>
+            <comment id="RT_POS219NR_NRTI">K219N/R are accessory TAMS that usually occur in combination with multiple other TAMs.</comment>
+            <comment id="RT_POS118I_Other">V118I is a polymorphic accessory NRTI-resistance mutation that occurs in combination with multiple TAMs.</comment>
+            <comment id="PR_POS54TAS_PIMajor">I54A/T/S are nonpolymorphic PI-selected mutations that occur almost exclusively in patients who have received multiple PIs. I54A/T/S are associated with reduced susceptibility to each of the PIs except DRV.</comment>
+            <comment id="PR_POS10IV_PIMinor">L10I/V are polymorphic, PI-selected accessory mutations that reduce PI susceptibility or increase the replication of viruses with other PI-resistance mutations.</comment>
+            <comment id="PR_POS82A_PIMajor">V82A is a nonpolymorphic substrate-cleft mutation selected primarily by IDV and LPV. It reduces susceptibility to these PIs and causes cross-resistance to ATV and NFV. When it occurs in combination with additional PI-resistance mutations it is also associated with reduced susceptibility to SQV and FPV.</comment>
+            <comment id="PR_POS48V_PIMajor">G48V is a nonpolymorphic substrate-cleft mutation selected by SQV and, less often, by IDV and LPV. It confers high-level resistance to SQV, intermediate-level resistance to ATV, and low-level resistance to NFV, IDV and LPV.</comment>
+            <comment id="PR_POS46IL_PIMajor">M46I/L are nonpolymorphic PI-selected mutations that reduce susceptibility to IDV, NFV, FPV, LPV and ATV when present with other mutations. M46L also reduces susceptibility to TPV.</comment>
+            <comment id="PR_POS20R_Other">K20R is a highly polymorphic, PI-selected accessory mutation that improves HIV-1 replication fitness in viruses with other PI-resistance mutations.</comment>
+            <comment id="PR_POS43T_PIMinor">K43T is a nonpolymorphic PI-selected accessory mutation that, in combination with other PI-resistance mutations, is associated with reduced susceptibility to most PIs. It is also part of the GSS for TPV.</comment>
+        </comments>
+    </success>
+
+    <success>
+        <sequence md5sum="99c34411b9b13f10452fa60c3a4deb72">CCTCAGATCACTCTTTGGCAACGACCCATCGTCACAATAAAGATAGGGGGGCAACTAAAGGAAGCTCTATTAGATACAGGAGCAGATGATACAGTATTAGAGGAAATGGATTTGCCAGGAAGATGGAGACCAAAAATGATAGGGGGAATTGGAGGTTTTATCAAAGTAAGACAGTATGAACAGATACCCATAGAAATCTGTGGACATAAAGTTATAACTACAGTATTAATAGGACCTACACCTGTCAACATAATTGGAAGAAATCTGATGACTCAGCTTGGNTGCACCTTAAATTTTCCCATTAGTCCTATTGAAACTGTACCAGTAAAATTAAAGCCAGGAATGGATGGTCCAAAAGTTAAACAATGGCCATTGACAGAAGAAAAAATAAAAGCATTAGTAGAAATTTGTACAGAATTGGAACAGGAAGGAAAAATTTCAAAAATTGGGCCTGAAAATCCATACAATACTCCAGTATTTGCCATAAAGAAGAAAAACAGTAATAGATGGAGAAAAWTAGTAGATTTCAGAGAACTTAATAAGAGAACTCAAGACTTCTGGGAAGTTCAATTAGGAATACCACATCCTGCAGGGTTAAAAAAGAAAAAATCAGTAACAGTACTGGATGTGGGTGATGCATATTTTTCAGTTCCCTTAGATGAAGACTTCAGGAAGTATACTGCATTTACCATACCTAGTATAAACAATGAGACACCAGGGATTAGATACCAGTACAATGTGCTTCCACAGGGATGGAAAGGATCACCAGCAATATTTCAAAGTAGCATGACAAAAATCTTAGAGCCTTTTAGAAAACAAAATCCAGAGATGGTTATCTATCAGTACATGGATGATTTGTACGTAGGATCTGAYTTAGAAATAGAGCAGCATAGAACAAAAATAGATGAACTGAGAAAACATCTGTTGGCGTGGGGGTTTTTCACACCAGACCAAAAACATCAGAAAGAGCCGCCATTCCATTGGATGGGGTATGAACTMCATCCTGATAAATGGMCAGTACAGCCTATAGTGCTGCCAGAA</sequence>
+
+        <summary>
+            <PR>
+                <present>true</present>
+                <consensus>PQITLWQRPLVTIKIGGQLKEALLDTGADDTVLEEMNLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF</consensus>
+                <alignedNASequence>CCTCAGATCACTCTTTGGCAACGACCCATCGTCACAATAAAGATAGGGGGGCAACTAAAGGAAGCTCTATTAGATACAGGAGCAGATGATACAGTATTAGAGGAAATGGATTTGCCAGGAAGATGGAGACCAAAAATGATAGGGGGAATTGGAGGTTTTATCAAAGTAAGACAGTATGAACAGATACCCATAGAAATCTGTGGACATAAAGTTATAACTACAGTATTAATAGGACCTACACCTGTCAACATAATTGGAAGAAATCTGATGACTCAGCTTGGNTGCACCTTAAATTTT</alignedNASequence>
+                <alignedAASequence>PQITLWQRPIVTIKIGGQLKEALLDTGADDTVLEEMDLPGRWRPKMIGGIGGFIKVRQYEQIPIEICGHKVITTVLIGPTPVNIIGRNLMTQLGCTLNF</alignedAASequence>
+                <firstAA>1</firstAA>
+                <lastAA>99</lastAA>
+                <subtype type="B" percentSimilarity="94.6"/>
+            </PR>
+            <RT>
+                <present>true</present>
+                <consensus>PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKIGPENPYNTPVFAIKKKDSTKWRKLVDFRELNKRTQDFWEVQLGIPHPAGLKKKKSVTVLDVGDAYFSVPLDKDFRKYTAFTIPSINNETPGIRYQYNVLPQGWKGSPAIFQSSMTKILEPFRKQNPDIVIYQYMDDLYVGSDLEIGQHRTKIEELRQHLLRWGFTTPDKKHQKEPPFLWMGYELHPDKWTVQPIVLPEKDSWTVNDIQKLVGKLNWASQIYAGIKVKQLCKLLRGTKALTEVIPLTEEAELELAENREILKEPVHGVYYDPSKDLIAEIQKQGQGQWTYQIYQEPFKNLKTGKYARMRGAHTNDVKQLTEAVQKIATESIVIWGKTPKFKLPIQKETWEAWWTEYWQATWIPEWEFVNTPPLVKLWYQLEKEPIVGAETFYVDGAANRETKLGKAGYVTDRGRQKVVSLTDTTNQKTELQAIHLALQDSGLEVNIVTDSQYALGIIQAQPDKSESELVSQIIEQLIKKEKVYLAWVPAHKGIGGNEQVDKLVSAGIRKVL</consensus>
+                <alignedNASequence>CCCATTAGTCCTATTGAAACTGTACCAGTAAAATTAAAGCCAGGAATGGATGGTCCAAAAGTTAAACAATGGCCATTGACAGAAGAAAAAATAAAAGCATTAGTAGAAATTTGTACAGAATTGGAACAGGAAGGAAAAATTTCAAAAATTGGGCCTGAAAATCCATACAATACTCCAGTATTTGCCATAAAGAAGAAAAACAGTAATAGATGGAGAAAAWTAGTAGATTTCAGAGAACTTAATAAGAGAACTCAAGACTTCTGGGAAGTTCAATTAGGAATACCACATCCTGCAGGGTTAAAAAAGAAAAAATCAGTAACAGTACTGGATGTGGGTGATGCATATTTTTCAGTTCCCTTAGATGAAGACTTCAGGAAGTATACTGCATTTACCATACCTAGTATAAACAATGAGACACCAGGGATTAGATACCAGTACAATGTGCTTCCACAGGGATGGAAAGGATCACCAGCAATATTTCAAAGTAGCATGACAAAAATCTTAGAGCCTTTTAGAAAACAAAATCCAGAGATGGTTATCTATCAGTACATGGATGATTTGTACGTAGGATCTGAYTTAGAAATAGAGCAGCATAGAACAAAAATAGATGAACTGAGAAAACATCTGTTGGCGTGGGGGTTTTTCACACCAGACCAAAAACATCAGAAAGAGCCGCCATTCCATTGGATGGGGTATGAACTMCATCCTGATAAATGGMCAGTACAGCCTATAGTGCTGCCAGAA</alignedNASequence>
+                <alignedAASequence>PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTELEQEGKISKIGPENPYNTPVFAIKKKNSNRWRKIVDFRELNKRTQDFWEVQLGIPHPAGLKKKKSVTVLDVGDAYFSVPLDEDFRKYTAFTIPSINNETPGIRYQYNVLPQGWKGSPAIFQSSMTKILEPFRKQNPEMVIYQYMDDLYVGSDLEIEQHRTKIDELRKHLLAWGFFTPDQKHQKEPPFHWMGYELHPDKWPVQPIVLPE</alignedAASequence>
+                <firstAA>1</firstAA>
+                <lastAA>248</lastAA>
+                <subtype type="B" percentSimilarity="95.0"/>
+            </RT>
+            <IN>
+                <present>false</present>
+            </IN>
+        </summary>
+
+        <PR_mutations>
+            <mutation classification="PI_MINOR">L10I</mutation>
+            <mutation classification="OTHER">N37D</mutation>
+            <mutation classification="OTHER">K43R</mutation>
+            <mutation classification="OTHER">D60E</mutation>
+            <mutation classification="OTHER">L63P</mutation>
+            <mutation classification="PI_MINOR">A71V</mutation>
+            <mutation classification="PI_MINOR">G73T</mutation>
+            <mutation classification="OTHER">V77I</mutation>
+            <mutation classification="PI_MAJOR">L90M</mutation>
+            <mutation classification="OTHER">I93L</mutation>
+        </PR_mutations>
+
+        <RT_mutations>
+            <mutation classification="NRTI">M41L</mutation>
+            <mutation classification="OTHER">K43Q</mutation>
+            <mutation classification="NRTI">D67N</mutation>
+            <mutation classification="NRTI">T69N</mutation>
+            <mutation classification="NRTI">K70R</mutation>
+            <mutation classification="NRTI">L74IL</mutation>
+            <mutation classification="OTHER">K122E</mutation>
+            <mutation classification="OTHER">D177E</mutation>
+            <mutation classification="OTHER">I178M</mutation>
+            <mutation classification="OTHER">G196E</mutation>
+            <mutation classification="OTHER">E203D</mutation>
+            <mutation classification="OTHER">Q207K</mutation>
+            <mutation classification="OTHER">R211A</mutation>
+            <mutation classification="NRTI">T215F</mutation>
+            <mutation classification="NRTI">K219Q</mutation>
+            <mutation classification="OTHER">L228H</mutation>
+            <mutation classification="OTHER">T240PT</mutation>
+        </RT_mutations>
+
+        <SequenceQA>
+            <PR>
+                <image href="http://sierra.hivdb.org/sierra/servlet/ChartMaker?ed=PR.Qdq.Dakctcvdm.Mblbrciclczdp"/>
+                <ambiguous>94</ambiguous>
+            </PR>
+            <RT>
+                <image href="http://sierra.hivdb.org/sierra/servlet/ChartMaker?ed=RT.Dbpcpcrcscwihil.Mbresgvgwhohvhzidiujg"/>
+            </RT>
+        </SequenceQA>
+
+        <drugScores>
+            <drug code="3TC" genericName="lamivudine" type="NRTI" score="20" levelStanford="3" levelSIR="I" >
+                <partialScore mutation="M41L" score="5.0"/>
+                <partialScore mutation="T215F" score="5.0"/>
+                <partialScore mutation="D67N,K70R,K219Q" score="10.0"/>
+            </drug>
+            <drug code="ABC" genericName="abacavir" type="NRTI" score="95" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="10.0"/>
+                <partialScore mutation="D67N" score="5.0"/>
+                <partialScore mutation="K70R" score="10.0"/>
+                <partialScore mutation="L74IL" score="30.0"/>
+                <partialScore mutation="T215F" score="15.0"/>
+                <partialScore mutation="K219Q" score="5.0"/>
+                <partialScore mutation="T215F,M41L" score="10.0"/>
+                <partialScore mutation="D67N,K70R,K219Q" score="10.0"/>
+            </drug>
+            <drug code="ATV/r" genericName="atazanavir/r" type="PI" score="45" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="G73T" score="10.0"/>
+                <partialScore mutation="L90M" score="25.0"/>
+                <partialScore mutation="G73T,L90M" score="10.0"/>
+            </drug>
+            <drug code="AZT" genericName="zidovudine" type="NRTI" score="140" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="15.0"/>
+                <partialScore mutation="D67N" score="15.0"/>
+                <partialScore mutation="T69N" score="5.0"/>
+                <partialScore mutation="K70R" score="30.0"/>
+                <partialScore mutation="T215F" score="45.0"/>
+                <partialScore mutation="K219Q" score="10.0"/>
+                <partialScore mutation="T215F,M41L" score="10.0"/>
+                <partialScore mutation="D67N,K70R,K219Q" score="10.0"/>
+            </drug>
+            <drug code="D4T" genericName="stavudine" type="NRTI" score="125" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="15.0"/>
+                <partialScore mutation="D67N" score="15.0"/>
+                <partialScore mutation="T69N" score="5.0"/>
+                <partialScore mutation="K70R" score="15.0"/>
+                <partialScore mutation="T215F" score="45.0"/>
+                <partialScore mutation="K219Q" score="10.0"/>
+                <partialScore mutation="T215F,M41L" score="10.0"/>
+                <partialScore mutation="D67N,K70R,K219Q" score="10.0"/>
+            </drug>
+            <drug code="DDI" genericName="didanosine" type="NRTI" score="135" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="10.0"/>
+                <partialScore mutation="D67N" score="5.0"/>
+                <partialScore mutation="T69N" score="10.0"/>
+                <partialScore mutation="K70R" score="10.0"/>
+                <partialScore mutation="L74IL" score="60.0"/>
+                <partialScore mutation="T215F" score="15.0"/>
+                <partialScore mutation="K219Q" score="5.0"/>
+                <partialScore mutation="T215F,M41L" score="10.0"/>
+                <partialScore mutation="D67N,K70R,K219Q" score="10.0"/>
+            </drug>
+            <drug code="DRV/r" genericName="darunavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="EFV" genericName="efavirenz" type="NNRTI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="ETR" genericName="etravirine" type="NNRTI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="FPV/r" genericName="fosamprenavir/r" type="PI" score="25" levelStanford="3" levelSIR="I" >
+                <partialScore mutation="G73T" score="5.0"/>
+                <partialScore mutation="L90M" score="20.0"/>
+            </drug>
+            <drug code="FTC" genericName="emtricitabine" type="NRTI" score="20" levelStanford="3" levelSIR="I" >
+                <partialScore mutation="M41L" score="5.0"/>
+                <partialScore mutation="T215F" score="5.0"/>
+                <partialScore mutation="D67N,K70R,K219Q" score="10.0"/>
+            </drug>
+            <drug code="IDV/r" genericName="indinavir/r" type="PI" score="50" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="G73T" score="10.0"/>
+                <partialScore mutation="L90M" score="30.0"/>
+                <partialScore mutation="G73T,L90M" score="10.0"/>
+            </drug>
+            <drug code="LPV/r" genericName="lopinavir/r" type="PI" score="20" levelStanford="3" levelSIR="I" >
+                <partialScore mutation="G73T" score="5.0"/>
+                <partialScore mutation="L90M" score="15.0"/>
+            </drug>
+            <drug code="NFV" genericName="nelfinavir" type="PI" score="75" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="G73T" score="15.0"/>
+                <partialScore mutation="L90M" score="60.0"/>
+            </drug>
+            <drug code="NVP" genericName="nevirapine" type="NNRTI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="RPV" genericName="rilpivirine" type="NNRTI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="SQV/r" genericName="saquinavir/r" type="PI" score="65" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="G73T" score="15.0"/>
+                <partialScore mutation="L90M" score="40.0"/>
+                <partialScore mutation="G73T,L90M" score="10.0"/>
+            </drug>
+            <drug code="TDF" genericName="tenofovir" type="NRTI" score="65" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M41L" score="10.0"/>
+                <partialScore mutation="D67N" score="5.0"/>
+                <partialScore mutation="K70R" score="10.0"/>
+                <partialScore mutation="T215F" score="15.0"/>
+                <partialScore mutation="K219Q" score="5.0"/>
+                <partialScore mutation="T215F,M41L" score="10.0"/>
+                <partialScore mutation="D67N,K70R,K219Q" score="10.0"/>
+            </drug>
+            <drug code="TPV/r" genericName="tipranavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+        </drugScores>
+
+        <comments>
+            <comment id="RT_POS41L_NRTI">M41L is a TAM that usually occurs with T215Y. Together, M41L and T215Y confer high-level resistance to AZT and d4T and intermediate-level resistance to ddI, ABC and TDF. However, viruses with M41L + T215Y + M184V will exhibit intermediate-level resistance to AZT and d4T and low-level resistance to TDF.</comment>
+            <comment id="RT_POS70R_NRTI">K70R causes intermediate-level resistance to AZT and possibly low-level resistance to d4T and TDF.</comment>
+            <comment id="RT_POS219QE_NRTI">K219Q/E are accessory TAMS associated with reduced susceptibility to AZT and possibly d4T.</comment>
+            <comment id="RT_POS67N_NRTI">D67N is a nonpolymorphic TAM associated with low-level resistance to AZT and d4T. When present with other TAMs, it reduces susceptibility to ABC, TDF and ddI.</comment>
+            <comment id="RT_POS74IV_NRTI">L74V/I cause high-level resistance to ddI and intermediate-level resistance to ABC. L74V increases susceptibility to AZT and TDF, but this increase is of uncertain clinical significance.</comment>
+            <comment id="RT_POS215F_NRTI">T215F is a TAM that causes intermediate/high-level resistance to AZT and d4T and low-level resistance to ABC, ddI and TDF. Compared with T215Y, T215F occurs more commonly with the Type II TAMs (D67N, K70R, and/or K219E) and in this context, it affects susceptibility to TDF, ABC, and ddI less markedly than T215Y.</comment>
+            <comment id="RT_POS69N_NRTI">T69N is a relatively non-polymorphic mutation weakly selected in patients receiving NRTIs. Their effects on NRTI susceptibility have not been well studied.</comment>
+            <comment id="PR_POS90M_PIMajor">L90M is a nonpolymorphic mutation selected primarily by SQV, NFV, IDV and LPV. It reduces susceptibility to each of the PIs except TPV and DRV.</comment>
+            <comment id="PR_POS71TVIL_PIMinor">A71T/V are polymorphisms that occur in 2-3% of untreated persons. They increase in prevalence in persons receiving PIs. A71I/L are nonpolymorphic mutations that occur in viruses with multiple PI-resistance mutations.</comment>
+            <comment id="PR_POS10IV_PIMinor">L10I/V are polymorphic, PI-selected accessory mutations that reduce PI susceptibility or increase the replication of viruses with other PI-resistance mutations.</comment>
+            <comment id="PR_POS73STCA_PIMinor">G73S/T/C/A are nonpolymorphic mutations that are selected primarily by ATV, IDV, NFV and SQV. They are associated with reduced susceptibility to these PIs and possibly to DRV, FPV and LPV.</comment>
+        </comments>
+    </success>
+
+    <success>
+        <sequence md5sum="65f914649d89b6aae26825c94fcfc589">CCTCAGATCACTCTTTGGCAACGACCCCTCGTCACAATAAAGATAGGGGGGCAACTAAAGGAAGCTCTATTAGATACAGGAGCAGATGATACAGTATTAGAAGAAATGAATTTGCCAGGAAGATGGAAACCAAAAATGATAGGGGGAATTGGAGGTTTTATCAAAGTAAGACAGTATGATCAGATACTCATAGAAATCTGTGGACATAAAGCTATAGGTACAGTATTAGTAGGACCTACACCTGTCAACATAATTGGAAGAAATTTGTTGACTCAGATTGGTTGCACTTTAAATTTTCCTATCAGTCCTATTGAAACTGTACCAGTAAAATTAAAGCCAGGAATGGATGGCCCAAAAGTTAAACAATGGCCATTGACAGAAGAAAAAATAAAAGCATTAGTAGAAATTTGTACAGAAATGGAAAAGGAAGGAAAAATTTCAAAAATTGGGCCTGAAAATCCATACAATACTCCAGTATTTGCCATAAAGAAAAAAGACAGTACTAAATGGAGAAAATTAGTAGATTTCAGAGAACTTAATAAGAGAACTCAGGACTTCTGGGAAGTTCAATTAGGGATACCACATCCCGCAGGGTTAAAAAAGAACAAATCAGTAACAGTACTAGATGTGGGTGATGCATATTTCTCAGTTCCCTTAGATGAAGACTTCAGGAAGTATACTGCATTCACCATACCTAGTATAAACAATGAGACACCAGGGATTAGATATCAGTACAATGTGCTGCCACAGGGATGGAAAGGATCACCAGCAATATTCCAAAGTAGCATGATAAAAATCTTAGAGCCTTTTAGAAAACAAAATCCAGACATAGTTATCTATCAATACGTGGATGATTTGTATGTAGGATCTGACTTAGAGATAGGGCAGCATAGAACAAAAATAGAGGAACTGAGACAGCATCTGTTGAGGTGGGGATTCACCACACCTGACAAAAAACATCAGAAAGAGCCTCCATTCCTGTGGMTGGGTTATGAACTCCATCCWGATAAATGGACAGTGCAGCCTATAGAGCTGCCAGAAAAAGACAGTTGGACTGTCAAYGACATACAGAAGTTAGTGGGAAAATTGAATTGGGCAAGTCAGATTTACGCAGGGATTAAAGTAAGGCAMTTATGTAAACTCCTT</sequence>
+
+        <summary>
+            <PR>
+                <present>true</present>
+                <consensus>PQITLWQRPLVTIKIGGQLKEALLDTGADDTVLEEMNLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF</consensus>
+                <alignedNASequence>CCTCAGATCACTCTTTGGCAACGACCCCTCGTCACAATAAAGATAGGGGGGCAACTAAAGGAAGCTCTATTAGATACAGGAGCAGATGATACAGTATTAGAAGAAATGAATTTGCCAGGAAGATGGAAACCAAAAATGATAGGGGGAATTGGAGGTTTTATCAAAGTAAGACAGTATGATCAGATACTCATAGAAATCTGTGGACATAAAGCTATAGGTACAGTATTAGTAGGACCTACACCTGTCAACATAATTGGAAGAAATTTGTTGACTCAGATTGGTTGCACTTTAAATTTT</alignedNASequence>
+                <alignedAASequence>PQITLWQRPLVTIKIGGQLKEALLDTGADDTVLEEMNLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF</alignedAASequence>
+                <firstAA>1</firstAA>
+                <lastAA>99</lastAA>
+                <subtype type="B" percentSimilarity="99.0"/>
+            </PR>
+            <RT>
+                <present>true</present>
+                <consensus>PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKIGPENPYNTPVFAIKKKDSTKWRKLVDFRELNKRTQDFWEVQLGIPHPAGLKKKKSVTVLDVGDAYFSVPLDKDFRKYTAFTIPSINNETPGIRYQYNVLPQGWKGSPAIFQSSMTKILEPFRKQNPDIVIYQYMDDLYVGSDLEIGQHRTKIEELRQHLLRWGFTTPDKKHQKEPPFLWMGYELHPDKWTVQPIVLPEKDSWTVNDIQKLVGKLNWASQIYAGIKVKQLCKLLRGTKALTEVIPLTEEAELELAENREILKEPVHGVYYDPSKDLIAEIQKQGQGQWTYQIYQEPFKNLKTGKYARMRGAHTNDVKQLTEAVQKIATESIVIWGKTPKFKLPIQKETWEAWWTEYWQATWIPEWEFVNTPPLVKLWYQLEKEPIVGAETFYVDGAANRETKLGKAGYVTDRGRQKVVSLTDTTNQKTELQAIHLALQDSGLEVNIVTDSQYALGIIQAQPDKSESELVSQIIEQLIKKEKVYLAWVPAHKGIGGNEQVDKLVSAGIRKVL</consensus>
+                <alignedNASequence>CCTATCAGTCCTATTGAAACTGTACCAGTAAAATTAAAGCCAGGAATGGATGGCCCAAAAGTTAAACAATGGCCATTGACAGAAGAAAAAATAAAAGCATTAGTAGAAATTTGTACAGAAATGGAAAAGGAAGGAAAAATTTCAAAAATTGGGCCTGAAAATCCATACAATACTCCAGTATTTGCCATAAAGAAAAAAGACAGTACTAAATGGAGAAAATTAGTAGATTTCAGAGAACTTAATAAGAGAACTCAGGACTTCTGGGAAGTTCAATTAGGGATACCACATCCCGCAGGGTTAAAAAAGAACAAATCAGTAACAGTACTAGATGTGGGTGATGCATATTTCTCAGTTCCCTTAGATGAAGACTTCAGGAAGTATACTGCATTCACCATACCTAGTATAAACAATGAGACACCAGGGATTAGATATCAGTACAATGTGCTGCCACAGGGATGGAAAGGATCACCAGCAATATTCCAAAGTAGCATGATAAAAATCTTAGAGCCTTTTAGAAAACAAAATCCAGACATAGTTATCTATCAATACGTGGATGATTTGTATGTAGGATCTGACTTAGAGATAGGGCAGCATAGAACAAAAATAGAGGAACTGAGACAGCATCTGTTGAGGTGGGGATTCACCACACCTGACAAAAAACATCAGAAAGAGCCTCCATTCCTGTGGMTGGGTTATGAACTCCATCCWGATAAATGGACAGTGCAGCCTATAGAGCTGCCAGAAAAAGACAGTTGGACTGTCAAYGACATACAGAAGTTAGTGGGAAAATTGAATTGGGCAAGTCAGATTTACGCAGGGATTAAAGTAAGGCAMTTATGTAAACTCCTT</alignedNASequence>
+                <alignedAASequence>PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKIGPENPYNTPVFAIKKKDSTKWRKLVDFRELNKRTQDFWEVQLGIPHPAGLKKNKSVTVLDVGDAYFSVPLDEDFRKYTAFTIPSINNETPGIRYQYNVLPQGWKGSPAIFQSSMIKILEPFRKQNPDIVIYQYVDDLYVGSDLEIGQHRTKIEELRQHLLRWGFTTPDKKHQKEPPFLWLGYELHPDKWTVQPIELPEKDSWTVNDIQKLVGKLNWASQIYAGIKVRHLCKLL</alignedAASequence>
+                <firstAA>1</firstAA>
+                <lastAA>283</lastAA>
+                <subtype type="B" percentSimilarity="96.2"/>
+            </RT>
+            <IN>
+                <present>false</present>
+            </IN>
+        </summary>
+
+        <PR_mutations>
+        </PR_mutations>
+
+        <RT_mutations>
+            <mutation classification="NNRTI">K103N</mutation>
+            <mutation classification="OTHER">K122E</mutation>
+            <mutation classification="OTHER">T165I</mutation>
+            <mutation classification="NRTI">M184V</mutation>
+            <mutation classification="NNRTI">M230LM</mutation>
+            <mutation classification="OTHER">V245E</mutation>
+            <mutation classification="OTHER">K277R</mutation>
+            <mutation classification="OTHER">Q278HQ</mutation>
+        </RT_mutations>
+
+        <SequenceQA>
+            <PR>
+                <image href="http://sierra.hivdb.org/sierra/servlet/ChartMaker?ed=PR.M"/>
+            </PR>
+            <RT>
+                <image href="http://sierra.hivdb.org/sierra/servlet/ChartMaker?ed=RT.Ddzhciw.Mesgjjlkrks"/>
+            </RT>
+        </SequenceQA>
+
+        <drugScores>
+            <drug code="3TC" genericName="lamivudine" type="NRTI" score="60" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M184V" score="60.0"/>
+            </drug>
+            <drug code="ABC" genericName="abacavir" type="NRTI" score="15" levelStanford="3" levelSIR="I" >
+                <partialScore mutation="M184V" score="15.0"/>
+            </drug>
+            <drug code="ATV/r" genericName="atazanavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="AZT" genericName="zidovudine" type="NRTI" score="-10" levelStanford="1" levelSIR="S" >
+                <partialScore mutation="M184V" score="-10.0"/>
+            </drug>
+            <drug code="D4T" genericName="stavudine" type="NRTI" score="-10" levelStanford="1" levelSIR="S" >
+                <partialScore mutation="M184V" score="-10.0"/>
+            </drug>
+            <drug code="DDI" genericName="didanosine" type="NRTI" score="10" levelStanford="2" levelSIR="S" >
+                <partialScore mutation="M184V" score="10.0"/>
+            </drug>
+            <drug code="DRV/r" genericName="darunavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="EFV" genericName="efavirenz" type="NNRTI" score="105" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="K103N" score="60.0"/>
+                <partialScore mutation="M230LM" score="45.0"/>
+            </drug>
+            <drug code="ETR" genericName="etravirine" type="NNRTI" score="30" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="M230LM" score="30.0"/>
+            </drug>
+            <drug code="FPV/r" genericName="fosamprenavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="FTC" genericName="emtricitabine" type="NRTI" score="60" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="M184V" score="60.0"/>
+            </drug>
+            <drug code="IDV/r" genericName="indinavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="LPV/r" genericName="lopinavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="NFV" genericName="nelfinavir" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="NVP" genericName="nevirapine" type="NNRTI" score="120" levelStanford="5" levelSIR="R" >
+                <partialScore mutation="K103N" score="60.0"/>
+                <partialScore mutation="M230LM" score="60.0"/>
+            </drug>
+            <drug code="RPV" genericName="rilpivirine" type="NNRTI" score="45" levelStanford="4" levelSIR="I" >
+                <partialScore mutation="M230LM" score="45.0"/>
+            </drug>
+            <drug code="SQV/r" genericName="saquinavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+            <drug code="TDF" genericName="tenofovir" type="NRTI" score="-10" levelStanford="1" levelSIR="S" >
+                <partialScore mutation="M184V" score="-10.0"/>
+            </drug>
+            <drug code="TPV/r" genericName="tipranavir/r" type="PI" score="0" levelStanford="1" levelSIR="S" >
+            </drug>
+        </drugScores>
+
+        <comments>
+            <comment id="RT_POS230L_NNRTI">M230L is an uncommon nonpolymorphic mutation selected in patients receiving EFV, NVP, and RPV. It causes intermediate to high-level resistance to each of the NNRTIs.</comment>
+            <comment id="RT_POS184VI_NRTI">M184V/I cause high-level resistance to 3TC and FTC and low-level resistance to ddI and ABC. However, M184V/I are not contraindications to continued treatment with 3TC or FTC because they increase susceptibility to AZT, TDF and d4T and are associated with clinically significant reductions in HIV-1 replication. In combination with K101E or E138K, M184I synergistically reduces RPV susceptibility.</comment>
+            <comment id="RT_POS103N_NNRTI">K103N is a nonpolymorphic mutation that causes high-level resistance to NVP (~50-fold reduced susceptibility) and EFV (~20-fold reduced susceptibility).</comment>
+        </comments>
+    </success>
+</Stanford_Algorithm_Interpretation>
