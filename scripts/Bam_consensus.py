@@ -192,14 +192,14 @@ for x in iter:
 
  
         if ( read.indel > 0):
-            insertion = read.alignment.seq[ read.qpos:read.qpos+ read.indel + 1]
+            insertion = read.alignment.seq[ read.query_position:read.query_position+ read.indel + 1]
             base_counts = update_counts(base_counts, insertion)
              
              
 
         elif ( read.indel < 0):
             deletion = ''
-            deletion = read.alignment.seq[ read.qpos] + "-" * abs(read.indel)
+            deletion = read.alignment.seq[ read.query_position] + "-" * abs(read.indel)
             deletion = deletion.lower()
             deletion = deletion.title()
 
@@ -207,7 +207,7 @@ for x in iter:
             
             
         else:
-            alt_base = read.alignment.seq[ read.qpos];
+            alt_base = read.alignment.seq[ read.query_position];
             base_counts = update_counts(base_counts, alt_base)
 
 

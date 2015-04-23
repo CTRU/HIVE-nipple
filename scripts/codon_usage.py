@@ -4,7 +4,7 @@ import getopt
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
-sys.path.append("/software/lib/python2.7/site-packages/pysam-0.7.1-py2.7-linux-x86_64.egg/")
+#sys.path.append("/software/lib/python2.7/site-packages/pysam-0.7.1-py2.7-linux-x86_64.egg/")
 
 import re
 
@@ -263,25 +263,25 @@ for gene in gene_list:
             if (read.alignment.is_unmapped or read.alignment.is_duplicate or read.is_del):
                 continue
 
-            if ( read.qpos + read.indel + 3 > read.alignment.alen):
-#                print "\t".join([str(read.qpos), str(read.alignment.alen)])
+            if ( read.query_position + read.indel + 3 > read.alignment.alen):
+#                print "\t".join([str(read.query_position), str(read.alignment.alen)])
                 continue
 
  
             if ( read.indel > 0):
-                insertion = read.alignment.seq[ read.qpos:read.qpos+ read.indel + 3 ]
+                insertion = read.alignment.seq[ read.query_position:read.query_position+ read.indel + 3 ]
                 codon_counts = update_counts(codon_counts, insertion)
              
 
             elif ( read.indel < 0):
                 deletion = ''
-                deletion = read.alignment.seq[ read.qpos] + "-" * abs(read.indel)
+                deletion = read.alignment.seq[ read.query_position] + "-" * abs(read.indel)
 
                 codon_counts = update_counts(codon_counts, deletion)
             
             
             else:
-                alt_base = read.alignment.seq[ read.qpos:read.qpos + 3];
+                alt_base = read.alignment.seq[ read.query_position:read.query_position + 3];
                 if (len( alt_base) != 3):
                     continue
                 codon_counts = update_counts(codon_counts, alt_base)

@@ -20,7 +20,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 width, height = A4 #keep for later
 
-sys.path.append("/software/lib/python2.7/site-packages/pysam-0.7.1-py2.7-linux-x86_64.egg/")
+
 
 import pysam
 
