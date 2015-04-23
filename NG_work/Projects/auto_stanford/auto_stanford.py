@@ -17,7 +17,7 @@ infolder = sys.argv[1]
 service = "http://db-webservices.stanford.edu:5440/axis/services/StanfordAlgorithm?wsdl"
 client = Client(service)
 
-key = "0000-0000-0000-0000"
+key = "Z8X1-KEKM-MESX-ZHU2"
 
 # globals for functions
 sequence = ""
