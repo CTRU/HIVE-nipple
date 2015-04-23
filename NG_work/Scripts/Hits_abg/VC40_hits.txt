@@ -1,0 +1,10 @@
+gene	contig	start	end	strand	length	SNPs	No. insertions	No. deletions	No. clipped regions	total insertion length	total deletion length	clipped length	No. contig breaks	Percent id	Match length	Match length percent	Overlapping secondary gene hits
+yqil	VC40	347920	348436	+	516	7	0	0	0	0	0	0	0	98.6434108527	516	100.0	
+pta	VC40	577163	577637	+	474	8	0	0	0	0	0	0	0	98.3122362869	474	100.0	
+tpi	VC40	778754	779156	+	402	6	0	0	0	0	0	0	0	98.5074626866	402	100.0	
+gmk	VC40	1125719	1126136	+	417	9	0	0	0	0	0	0	0	97.8417266187	417	100.0	
+catA3_P00485	VC40	1230036	1230687	+	651	0	0	0	0	0	0	0	0	100.0	651	100.0	
+glpF	VC40	1236093	1236558	+	465	3	0	0	0	0	0	0	0	99.3548387097	465	100.0	
+aroE	VC40	1565347	1565803	-	456	6	0	0	0	0	0	0	0	98.6842105263	456	100.0	
+sdrM	VC40	2119651	2120995	-	1344	8	0	0	0	0	0	0	0	99.4047619048	1344	100.0	
+arcC	VC40	2598278	2598734	-	456	9	0	0	0	0	0	0	0	98.0263157895	456	100.0	
