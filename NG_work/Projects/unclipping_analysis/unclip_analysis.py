@@ -43,16 +43,31 @@ def system_call( step_name, cmd ):
 # Gets location of fastq
 fastq_dir = sys.argv[1]
 
-sample_name = ""
+# Make analysis directory
+analysis_dir = fastq_dir +"unclip_analysis/"
 
+# Set globals 
+sample_name = ""
 sample_name_unclipped = ""
+
+# Get sample names from fasta files
+for item in os.listdir(fastq_dir):
+    if item.endswith(".1.fq.gz"):
+        sample_name = re.sub(r"(.*).1.fq.gz", r"\1", item)
+
+
+
 
 #------------------------------------------------------------
 # Commands to be executed
 
+# Make analysis directory
+
+make_analysis_directory = "mkdir " + analysis_dir
+
 # remove the sequencing adaptors
-remove_adapters_1 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".1.fq.gz | gzip -c > " + fastq_dir + sample_name +"_ra.1.fq.gz"
-remove_adapters_2 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".2.fq.gz | gzip -c > " + fastq_dir + sample_name +"_ra.2.fq.gz"
+remove_adapters_1 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".1.fq.gz"
+remove_adapters_2 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".2.fq.gz"
 
 # Align the reads to the reference (run smalt-0.7.6 to see all options)
 smalt_1 = "/software/bin/smalt-0.7.6 map -f samsoft /refs/HIV/K03455_s1k6 " + sample_name + "_ra.1.fq.gz " + sample_name + "_ra.2.fq.gz > " + sample_name + ".sam"
@@ -78,13 +93,14 @@ index_fix = "/software/bin/samtools index " + sample_name + "HIV_fixed.bam"
 #------------------------------------------------------------
 # Main pipeline 
 
-for item in os.listdir(fastq_dir):
-    if item.endswith("1.fq.gz"):
-        sample_name = re.sub(r"(.*).1.fq.gz", r"\1", item )
+system_call("Making directory", make_analysis_directory)
 
-    print sample_name
+
+#system_call("Removing adapters from fastq 1" , remove_adapters_1)
+system_call("Removing adapters from fastq 2" , remove_adapters_2)
+
     
-    #system_call("test", test)
+   
 
 
 #------------------------------------------------------------
