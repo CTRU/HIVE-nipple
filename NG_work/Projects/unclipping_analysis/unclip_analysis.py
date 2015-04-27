@@ -31,14 +31,14 @@ def system_call( step_name, cmd ):
 
     except subprocess.CalledProcessError as scall:
         if ( VERBOSE == "DEBUG"):
-            print "Script failed at %s stage - exit code was %s, ouput = %s" % (step_name, scall.returncode, scall.output) 
+            print "Script failed at %s stage - exit code was %s, ouput = %s" % (step_name, scall.returncode, scall.output)
 
         if ( VERBOSE == "INFO"):
             print "Script failed at %s stage - exit code was %s" % (step_name, scall.returncode)
         exit()
 
 #------------------------------------------------------------
-# Define fastq's and get sample names. 
+# Define fastq's and get sample names.
 
 # Gets location of fastq
 fastq_dir = sys.argv[1]
@@ -46,7 +46,7 @@ fastq_dir = sys.argv[1]
 # Make analysis directory
 analysis_dir = fastq_dir +"unclip_analysis/"
 
-# Set globals 
+# Set globals
 sample_name = ""
 sample_name_unclipped = ""
 
@@ -66,8 +66,13 @@ for item in os.listdir(fastq_dir):
 make_analysis_directory = "mkdir " + analysis_dir
 
 # remove the sequencing adaptors
+<<<<<<< HEAD
 remove_adapters_1 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".1.fq.gz > " + analysis_dir + sample_name + "_ra.1.fq; cd " + analysis_dir + "; gzip " + sample_name + "_ra.1.fq; cd .."
 remove_adapters_2 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".2.fq.gz > " + analysis_dir + sample_name + "_ra.2.fq; cd " + analysis_dir + "; gzip " + sample_name + "_ra.2.fq; cd .."
+=======
+remove_adapters_1 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".1.fq.gz > " + analysis_dir + sample_name + "_rm.1.fq"
+remove_adapters_2 = "/software/packages/cutadapt-1.1/bin/cutadapt -b TGTAGAACCATGTCGTCAGTGT -b AGACCAAGTCTCTGCTACCGT " + fastq_dir + sample_name +".2.fq.gz > " + analysis_dir + sample_name + "_rm.2.fq"
+>>>>>>> 2c62b93d6daaaa14c8bbb1e23f19b1a3dda9d6c9
 
 # Align the reads to the reference (run smalt-0.7.6 to see all options)
 smalt = "/software/bin/smalt_0.7.6 map -f samsoft /refs/HIV/K03455_s1k6 " + analysis_dir + sample_name + "_ra.1.fq.gz " + analysis_dir + sample_name + "_ra.2.fq.gz > " + analysis_dir + sample_name + ".sam"
@@ -95,6 +100,7 @@ unclip_bamfile = "/software/bin/scripts/bam_unclip_bases.pl " + analysis_dir + s
 
 #------------------------------------------------------------
 #------------------------------------------------------------
+<<<<<<< HEAD
 # Sort the unclipped bamfile with samtools
 sort_bam_2 = "/software/bin/samtools sort " + analysis_dir + sample_name_unclipped + ".bam " + analysis_dir + sample_name_unclipped + "_sorted"
 
@@ -103,6 +109,9 @@ deduplicate_bamfile_2 = "/software/bin/picard -T MarkDuplicates I= " + analysis_
 
 # Index the bam file so it can be viewed in IGV later on
 index_2 = "/software/bin/samtools index " + analysis_dir + sample_name_unclipped + "_rmdups.bam"
+=======
+# Main pipeline
+>>>>>>> 2c62b93d6daaaa14c8bbb1e23f19b1a3dda9d6c9
 
 # HIV alignment fix
 alignment_fixing_HIV_2 = "/software/packages/HIV-pipeline/scripts/bam_fix_indels.pl " + analysis_dir + sample_name_unclipped + "_rmdups.bam " + analysis_dir + sample_name_unclipped + "_fixed.bam"
@@ -110,9 +119,17 @@ alignment_fixing_HIV_2 = "/software/packages/HIV-pipeline/scripts/bam_fix_indels
 # Index the new bam file so it can be viewed in IGV later on
 index_fix_2 = "/software/bin/samtools index " + analysis_dir + sample_name_unclipped + "_fixed.bam"
 
+<<<<<<< HEAD
 # Run unclip bamfile
 unclip_bamfile_2 = "/software/bin/scripts/bam_unclip_bases.pl " + analysis_dir + sample_name_unclipped + ".bam"
 
+=======
+system_call("Removing adapters from fastq 1" , remove_adapters_1)
+system_call("Removing adapters from fastq 2" , remove_adapters_2)
+
+
+
+>>>>>>> 2c62b93d6daaaa14c8bbb1e23f19b1a3dda9d6c9
 
 
 #------------------------------------------------------------
