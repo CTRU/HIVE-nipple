@@ -4,6 +4,7 @@
 import cgi
 import cgitb 
 import MySQLdb
+import subprocess
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -15,6 +16,13 @@ pp = pprint.PrettyPrinter(indent=4)
 TITLE = ""
 
 #panels = ["nick", "is", "cool"]
+
+def system_call ( process ):
+
+	while ( True ):
+		locate = process.stdout.readlines()
+
+		return locate
 
 
 def fetch_panels_from_DB():
@@ -237,13 +245,75 @@ def print_page( page ):
 		
 		s += "<BR><BR>"
 		s += "<hr>"
-		s += "<footer> Return to: <a href=?page=> Tools index</a> </footer>"
+		s += "<footer> To reset this page : <a href=?page=Re-Analyse> click here</a> </footer>"
+		s += "<footer> Return to : <a href=?page=> Tools index</a> </footer>"
 
 
 		s += "</form>"
 
 		print s
-		print form.getvalue("gnumber")
+		exit()
+
+################# BAMFIND ###########################################################################
+
+
+	if (page == "bam_find"):
+		global TITLE 
+		TITLE = "Gemini .bam finder"
+		print make_header()
+
+		
+			
+
+		gnumber = ""
+		if (form.getvalue('gnumber')):
+			gnumber = form.getvalue('gnumber')
+
+
+  		s = "<center><h1>Bam-Find : Gemini .bam file locator</h1></center>\n"
+		s += "<p></p>\n <hr>"
+		s += "<BR> This tool locates a <b>\".bamfile\"</b> for a <b>GEMINI</b> sample - this can then be loaded up in IGV2 for inspection<BR><BR> You will need;<BR><ul><li><b> Gnumber</li></ul>"
+		s += "<BR><BR><BR>"
+
+		s += "<form name='bamfinder' action ='testface.cgi'>"
+		s += "<input type='hidden' name='page' value='bam_find'>"
+
+		s += "G-number   :&nbsp&nbsp&nbsp&nbsp<select name='gnumber'>"
+		s += "<option value=""> Select sample </option>"
+		
+
+
+		gnumbers = fetch_gnumbers_from_DB()
+
+		for gnum in sorted(gnumbers):
+			#print gnumber
+			#exit()
+			if not gnum.startswith("G"):
+				continue
+			s += "<option value='%s' > %s </option>" % (gnum, gnum)
+
+
+
+		
+		s += "<input type='submit' name='locate_file' value='Please select a Gnumber' required>"
+
+		if form.getvalue('gnumber') == None:
+			s += "<BR><BR><BR><font color=red><b>!!!PLEASE SELECT A GNUMBER AND RE-RUN!!!</font></b><BR><BR>"
+		else:
+			proc1 = subprocess.Popen("ssh mgcl01 locate test" , stdout=subprocess.PIPE, shell=True)
+			location_return = system_call(proc1)
+			print ("").join(location_return)
+			
+
+
+		s += "<hr>"
+		s += "<footer> To reset this page : <a href=?page=bam_find> click here</a> </footer>"
+		s += "<footer> Return to : <a href=?page=> Tools index</a> </footer>"
+
+		print s
+		exit()
+
+####################################################################################################
 		
 			
 	else:
@@ -252,8 +322,12 @@ def print_page( page ):
 		print make_header()
 		s  = "<center><h1>Molecular Genetics : Informatic Tools Directory</h1></center>\n"
 		s += "<p></p>\n <hr>"
-		s += "<BR><ul><li><b>Re-Analyse:</b> Re-do bio-informatic analysis of a gemini sample - <a href=?page=Re-Analyse>Re-Analyse</a></ul>"	
+		s += "<BR><ul><li><b>Re-Analyse:</b> Re-do bio-informatic analysis of a gemini sample - <a href=?page=Re-Analyse>Re-Analyse</a>"
+		s += "<BR>"
+		s += "<li><b>Bam-Find:</b> find the path to a Gemini bamfile <a href=?page=bam_find>Bam-Find</a></ul>"	
+	
 		print s
+		exit()
 
 
 
