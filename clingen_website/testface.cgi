@@ -1,29 +1,39 @@
 #!/usr/bin/python
 
+########################################################################################
 # Import modules for CGI handling 
+########################################################################################
 import cgi
 import cgitb 
 import MySQLdb
 import subprocess
-
+import glob
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
+########################################################################################
+########################################################################################
 
-# Webpages
 
-
+########################################################################################
+# Globals
+########################################################################################
 TITLE = ""
+########################################################################################
+########################################################################################
 
-#panels = ["nick", "is", "cool"]
+########################################################################################
+#Functions
+########################################################################################
 
-def system_call ( process ):
+def system_call (cmd): 
+	try:
+		subprocess.check_call(cmd, shell=True)
+	except:
+		subprocess.CalledProcessError
 
-	while ( True ):
-		locate = process.stdout.readlines()
 
-		return locate
-
+############################################
 
 def fetch_panels_from_DB():
 
@@ -55,6 +65,7 @@ def fetch_panels_from_DB():
 
 	return panels
 
+############################################
 
 def fetch_gnumbers_from_DB():
 
@@ -70,7 +81,7 @@ def fetch_gnumbers_from_DB():
 	cur = db.cursor()
 
 	# Use all the SQL you like
-	cur.execute("SELECT name, runfolder FROM sample")
+	cur.execute("SELECT DISTINCT(name) FROM sample where name like 'G0%'")
 
 # print all the first cell of all the rows
 	for row in cur.fetchall():
@@ -84,10 +95,8 @@ def fetch_gnumbers_from_DB():
 
 	return gnumbers
 
+############################################
 
-#
-# Setup the page
-#
 def make_header(  ):
 
 	s  =  "Content-type:text/html\r\n\r\n"
@@ -95,18 +104,44 @@ def make_header(  ):
 	s +=  "<body bgcolor=lightgrey>"
 	return s
 
+############################################
+
+def find_all(name, path):
+    result = []
+    for root, dirs, files in os.walk(path):
+        if name in files:
+            result.append(os.path.join(root, name))
+
+    print "HELLO TO MATT"        
+    return result
+
+############################################
+
+def run_analysis ( gnumber, panel ):
+
+	return "/software/packages/ctru-clinical/scripts/gemini/vcf2xls.pl -p \"" + panel + "\" " + gnumber 
+
+########################################################################################
+########################################################################################
+
+
+########################################################################################
+#Generate website
+########################################################################################
+
 def print_page( page ):
 
-		
+########################################################################################		
 # AUTO GENERATED PAGES
-
+########################################################################################
 	if ( page == "Re-Analyse" ):
 		global TITLE 
 		TITLE = "Gemini re-analysis"
 		print make_header()
 
-		### SUBMIT BUTTON PAGE ###
-
+########################################################################################
+# Re- Analyse
+########################################################################################
 		if (form.getvalue ('Run_button')):
 			
 			s  = "<center><h1>Re-Analyser : Results</h1></center>\n"
@@ -178,11 +213,10 @@ def print_page( page ):
 
 		if form.getvalue('gnumber'):
 			gnumber = form.getvalue('gnumber')
-			s += "G-number   :&nbsp&nbsp&nbsp&nbsp<select disabled name='gnumber''"
-			s += "<option value='%s'> Select sample </option>" % gnumber
-		else:
-			s += "G-number   :&nbsp&nbsp&nbsp&nbsp<select name='gnumber'>"
-			s += "<option value=""> Select sample </option>"
+		
+		s += "G-number   :&nbsp&nbsp&nbsp&nbsp<select name='gnumber''"
+		s += "<option value='%s'> Select sample </option>"
+		
 		
 		############################################	
 
@@ -193,7 +227,12 @@ def print_page( page ):
 			#exit()
 			if not gnum.startswith("G"):
 				continue
-			s += "<option value='%s' > %s </option>" % (gnum, gnum)
+			if gnum == gnumber :
+				s += "<option selected='selected' value='%s' > %s </option>" % (gnum, gnum)
+			else:
+				s += "<option value='%s' > %s </option>" % (gnum, gnum)
+
+
 
 		s += "</select>"
 		s += "<BR>"
@@ -254,8 +293,9 @@ def print_page( page ):
 		print s
 		exit()
 
-################# BAMFIND ###########################################################################
-
+########################################################################################
+# Bam-Find
+########################################################################################
 
 	if (page == "bam_find"):
 		global TITLE 
@@ -273,7 +313,7 @@ def print_page( page ):
   		s = "<center><h1>Bam-Find : Gemini .bam file locator</h1></center>\n"
 		s += "<p></p>\n <hr>"
 		s += "<BR> This tool locates a <b>\".bamfile\"</b> for a <b>GEMINI</b> sample - this can then be loaded up in IGV2 for inspection<BR><BR> You will need;<BR><ul><li><b> Gnumber</li></ul>"
-		s += "<BR><BR><BR>"
+		s += "<BR>"
 
 		s += "<form name='bamfinder' action ='testface.cgi'>"
 		s += "<input type='hidden' name='page' value='bam_find'>"
@@ -295,17 +335,35 @@ def print_page( page ):
 
 
 		
-		s += "<input type='submit' name='locate_file' value='Please select a Gnumber' required>"
+		s += "<input type='submit' name='locate_file' value='Find .bam file' required>"
 
 		if form.getvalue('gnumber') == None:
 			s += "<BR><BR><BR><font color=red><b>!!!PLEASE SELECT A GNUMBER AND RE-RUN!!!</font></b><BR><BR>"
 		else:
-			proc1 = subprocess.Popen("ssh mgcl01 locate test" , stdout=subprocess.PIPE, shell=True)
-			location_return = system_call(proc1)
-			print ("").join(location_return)
+			
+			#print gnumber + ".bam"
+			search_string = "/data/gemini/*/bams/%s.bam" % gnumber
+			#print search_string
+			bamfiles = glob.glob(search_string)
+			#print bamfiles
+			if bamfiles == []:
+				
+				s += "<BR><BR><BR> No bamfiles were found for this sample. Please consult Kim Brugger<BR>"
+
+			else:
+
+				for bamfile in bamfiles:
+
+
+					IGV_url = "http://localhost:60151/load?file=%s" % bamfile
+			#print IGV_url
 			
 
+			#print bam_locations
+			#print "HI"
+					s += "<BR><BR><BR> <a href='%s'> %s </a>" % (IGV_url, IGV_url)
 
+		s += "<BR>"		
 		s += "<hr>"
 		s += "<footer> To reset this page : <a href=?page=bam_find> click here</a> </footer>"
 		s += "<footer> Return to : <a href=?page=> Tools index</a> </footer>"
@@ -313,6 +371,7 @@ def print_page( page ):
 		print s
 		exit()
 
+####################################################################################################
 ####################################################################################################
 		
 			
